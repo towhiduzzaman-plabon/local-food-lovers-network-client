@@ -3,22 +3,23 @@ import beefImg from "../assets/beef.webp";
 import chickenImg from "../assets/chicken.webp";
 import classicImg from "../assets/classic.webp";
 
+// Promo items data
 const items = [  {
     title: "BEEF",
-    subtitle: "MADCHEF DOUBLE CHEESE", // real-style item
-    price: 499, // BDT
+    subtitle: "MADCHEF DOUBLE CHEESE", 
+    price: 499,
     img: beefImg,
   },
   {
     title: "CHICKEN",
     subtitle: "CHEEZ CRISPY CHICKEN",
-    price: 349, // BDT
+    price: 349,
     img: chickenImg,
   },
   {
     title: "CLASSIC",
     subtitle: "TAKEOUT CLASSIC",
-    price: 299, // BDT
+    price: 299, 
     img: classicImg,
   },
 ];

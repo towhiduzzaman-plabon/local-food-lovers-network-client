@@ -56,7 +56,7 @@ export default function Navbar() {
                     }}
                   />
                 </summary>
-
+                
                 <ul className="menu dropdown-content bg-base-200 rounded-box z-[1] w-60 p-3 shadow">
                   <li className="mb-2">
                     <div className="flex items-center gap-3 p-2 rounded bg-base-100">

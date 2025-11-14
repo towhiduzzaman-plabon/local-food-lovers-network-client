@@ -1,4 +1,3 @@
-// HowItWorks.jsx
 import burgerDrink from "../assets/burgers-11.webp";
 import friesHotdog from "../assets/55555.webp";
 import pizzaBox    from "../assets/121.webp";
@@ -6,7 +5,6 @@ import pizzaBox    from "../assets/121.webp";
 function IconCircleImg({ src, alt }) {
   return (
     <div className="mx-auto mb-6 w-36 h-36 md:w-44 md:h-44 rounded-full bg-orange-300/70 flex items-center justify-center">
-     
       <img
         src={src}
         alt={alt}
