@@ -1,4 +1,3 @@
-// client/src/lib/axios.js
 import axios from 'axios';
 
 export const api = axios.create({

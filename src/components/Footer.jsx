@@ -14,7 +14,6 @@ export default function Footer() {
         </aside>
       </div>
 
-      {/* bottom bar: copyright + payment icons */}
       <div className="border-t px-4">
         <div className="container mx-auto flex items-center justify-between gap-4 py-3 text-sm">
           <p className="whitespace-nowrap">

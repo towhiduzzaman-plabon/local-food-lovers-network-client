@@ -6,7 +6,7 @@ import pizzaBox    from "../assets/121.webp";
 function IconCircleImg({ src, alt }) {
   return (
     <div className="mx-auto mb-6 w-36 h-36 md:w-44 md:h-44 rounded-full bg-orange-300/70 flex items-center justify-center">
-      {/* সব ডিভাইসে সমান সাইজে দেখাবে */}
+     
       <img
         src={src}
         alt={alt}

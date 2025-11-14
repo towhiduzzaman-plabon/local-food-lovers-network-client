@@ -31,7 +31,7 @@ export default function AuthProvider({ children }) {
       lastIssuedTokenRef.current = idToken;
     } catch (e) {
       console.warn('JWT exchange failed (will retry on next token refresh):', e?.response?.data || e.message);
-      // ❌ এখানে আর signOut করা হবে না
+
       lastIssuedTokenRef.current = null;
     } finally {
       issuingRef.current = false;

@@ -3,8 +3,7 @@ import beefImg from "../assets/beef.webp";
 import chickenImg from "../assets/chicken.webp";
 import classicImg from "../assets/classic.webp";
 
-const items = [
-  {
+const items = [  {
     title: "BEEF",
     subtitle: "MADCHEF DOUBLE CHEESE", // real-style item
     price: 499, // BDT

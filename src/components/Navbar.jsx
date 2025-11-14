@@ -1,8 +1,7 @@
-// src/components/Navbar.jsx
 import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 import { avatarFromUser } from '../utils/avatar';
-import logo from '../assets/logo.png'; // <<— আপনা
+import logo from '../assets/logo.png'; 
 
 export default function Navbar() {
   const { user, logout } = useAuth();
@@ -17,7 +16,7 @@ export default function Navbar() {
             src={logo}
             alt="Local Food Lovers"
             className="h-8 w-auto object-contain"
-            // লোগো লোড না হলে fallback টেক্সট দেখাবে (accessibility ok)
+            
             onError={(e) => { e.currentTarget.style.display = 'none'; }}
           />
           <span className="text-xl font-bold hidden sm:inline">Local Food Lovers</span>
