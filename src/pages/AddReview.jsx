@@ -3,12 +3,12 @@ import { api } from '../lib/axios';
 import { toast } from 'react-hot-toast';
 import useAuth from '../hooks/useAuth';
 
-
+// AddReview page component
 export default function AddReview(){
 const { user } = useAuth();
 const { register, handleSubmit, reset } = useForm();
 
-
+// Handle form submission
 const onSubmit = async (data) => {
 try{
 const res = await api.post('/reviews', { ...data, userName: user.displayName });

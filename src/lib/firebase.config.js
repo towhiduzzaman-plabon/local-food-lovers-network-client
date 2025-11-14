@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 
-
+// Your web app's Firebase configuration
 const firebaseConfig = {
 apiKey: "AIzaSyAjgJDGP2HTLMAnT9RZGUsuKTulSPhn4GI",
 authDomain: "local-food-lovers-network.firebaseapp.com",
@@ -11,7 +11,7 @@ messagingSenderId: "431410589933",
 appId: "1:431410589933:web:67f98fc1d17a3ec3c01ce4"
 };
 
-
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();

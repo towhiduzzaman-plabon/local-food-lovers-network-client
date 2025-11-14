@@ -30,7 +30,7 @@ export default function AllReviews(){
     }
   });
 
-  // সব পেজ ফ্ল্যাট করে নাও
+  // Flattened list of reviews
   const items = useMemo(
     () => (data?.pages || []).flatMap(p => p?.data || []),
     [data]
