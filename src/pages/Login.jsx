@@ -46,7 +46,7 @@ export default function Login(){
         <button className="btn btn-primary w-full">Login</button>
       </form>
 
-      {/* ✅ Custom Google button (functions same as before) */}
+      {/* Google button */}
       <button
         type="button"
         onClick={handleGoogle}

@@ -4,14 +4,14 @@ import { api } from '../lib/axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
 
-
+// EditReview page component
 export default function EditReview(){
 const { id } = useParams();
 const nav = useNavigate();
 const { data } = useQuery({ queryKey:['review', id], queryFn: async()=> (await api.get(`/reviews/${id}`)).data });
 const { register, handleSubmit, reset } = useForm({ values: data });
 
-
+// Handle form submission
 const onSubmit = async (form) => {
 try{
 await api.put(`/reviews/${id}`, form);

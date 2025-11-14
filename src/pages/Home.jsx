@@ -7,7 +7,7 @@ import StatsRibbon from '../components/StatsRibbon';
 import PromoMenu from '../components/PromoMenu';
 import HowItWorks from '../components/HowItWorks';
 
-
+// Home page component
 export default function Home(){
   const { data: featured } = useQuery({
     queryKey:['featured'],
@@ -36,7 +36,7 @@ export default function Home(){
         </div>
       </div>
 
-      {/* নিচের সেকশনগুলো আগের মতোই */}
+      {/* Featured Reviews Section */}
       <section className="container mx-auto px-3">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-2xl font-semibold">Top Rated Picks</h2>

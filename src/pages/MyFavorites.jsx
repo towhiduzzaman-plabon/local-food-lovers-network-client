@@ -1,8 +1,8 @@
-// client/src/pages/MyFavorites.jsx
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { api } from '../lib/axios';
 import { toast } from 'react-hot-toast';
 
+// Fallback image URL
 const FALLBACK =
   'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=1200&auto=format&fit=crop';
 
@@ -12,7 +12,7 @@ export default function MyFavorites() {
     queryKey: ['favorites'],
     queryFn: async () => (await api.get('/favorites/me')).data,
   });
-
+// Mutation to delete a favorite
   const del = useMutation({
     mutationFn: async (id) => (await api.delete(`/favorites/${id}`)).data,
     onSuccess: () => {
