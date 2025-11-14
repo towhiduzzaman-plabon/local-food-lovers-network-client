@@ -35,15 +35,13 @@ function useCountUp(target = 0, duration = 1200) {
 function IconCircle({ children }) {
   return (
     <div className="h-16 w-16 rounded-full bg-base-100 shadow ring-1 ring-base-300 flex items-center justify-center">
-      {/* keep all icons at 28px */}
+      {/* keep all icons */}
       <div className="h-7 w-7 text-base-content">{children}</div>
     </div>
   );
 }
 
-/* === Consistent, clean SVG icons (stroke=1.8) === */
 
-/** spoon & fork */
 function IconUtensils() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
@@ -66,7 +64,7 @@ function IconSmile() {
   );
 }
 
-/** chef avatar with bow */
+/** avater */
 function IconChef() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
@@ -77,7 +75,7 @@ function IconChef() {
   );
 }
 
-/** heart (solid for contrast) */
+/** heart */
 function IconHeart() {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor">
@@ -100,7 +98,7 @@ function Stat({ icon, label, target }) {
 export default function StatsRibbon() {
   return (
     <section className="relative bg-base-200 py-12">
-      {/* subtle arc bg like the screenshot */}
+    
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-[0.05]"

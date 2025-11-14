@@ -16,7 +16,7 @@ export default function ReviewCard({ review }){
         reviewId: review._id,
         foodName: review.foodName,
         restaurantName: review.restaurantName,
-        foodImage: review.foodImage // DB-তে আসলটা রাখছি
+        foodImage: review.foodImage // DB original image URL
       });
       toast.success('Added to favorites');
     }catch(e){
