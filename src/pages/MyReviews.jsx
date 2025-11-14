@@ -1,4 +1,3 @@
-// src/pages/MyReviews.jsx
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { api } from '../lib/axios';
 import useAuth from '../hooks/useAuth';
@@ -12,20 +11,17 @@ export default function MyReviews(){
   const { user } = useAuth();
   const qc = useQueryClient();
 
-  // আগের মতই ফেচ
+// Fetch all reviews
   const { data } = useQuery({
     queryKey:['my-reviews', user?.email],
     queryFn: async()=> (await api.get('/reviews', { params: { q: '' } })).data
   });
 
-  // নিজের রিভিউ + নরমালাইজ: ছবি/তারিখের ফিল্ড ব্যাকআপ নাও
   const mine = (data?.data || [])
     .filter(r => r.userEmail === user?.email)
     .map(r => ({
       ...r,
-      // কিছু ডকে image/photo থাকতে পারে, সেটা নাও; না থাকলে খালি রাখো
       foodImage: r.foodImage || r.image || r.photo || '',
-      // createdAt না থাকলে date নাও
       createdAt: r.createdAt || r.date
     }));
 
@@ -101,7 +97,6 @@ export default function MyReviews(){
               </tr>
             ))}
           </tbody>
-
         </table>
       </div>
     </div>

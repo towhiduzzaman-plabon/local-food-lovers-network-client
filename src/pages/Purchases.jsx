@@ -3,6 +3,7 @@ import { api } from '../lib/axios';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
 
+// Fallback image URL
 const FALLBACK_IMG =
   'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=800&auto=format&fit=crop';
 

@@ -1,6 +1,7 @@
 import useAuth from '../hooks/useAuth';
 import { avatarFromUser } from '../utils/avatar';
 
+
 export default function Profile() {
   const { user } = useAuth();
   if (!user) return null;

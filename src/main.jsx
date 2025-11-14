@@ -6,7 +6,7 @@ import './styles/index.css';
 import AuthProvider from './context/AuthProvider';
 import QueryProvider from './providers/QueryProvider';
 
-
+// Render the application
 ReactDOM.createRoot(document.getElementById('root')).render(
 <React.StrictMode>
 <QueryProvider>

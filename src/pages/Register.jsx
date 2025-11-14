@@ -3,7 +3,7 @@ import useAuth from '../hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
 
-
+// Registration page component
 export default function Register(){
 const { register, handleSubmit } = useForm();
 const { register: registerUser } = useAuth();

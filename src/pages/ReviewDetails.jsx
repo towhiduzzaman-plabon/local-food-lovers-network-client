@@ -4,6 +4,8 @@ import { api } from '../lib/axios';
 import RatingStars from '../components/RatingStars';
 import { toast } from 'react-hot-toast';
 
+
+// Fallback image URL
 const FALLBACK_IMG =
   'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=1600&auto=format&fit=crop';
 
@@ -23,7 +25,7 @@ export default function ReviewDetails(){
 
   const handleBuy = async () => {
     try{
-      // ✅ _id যেভাবেই আসুক (string / {$oid: ...}), সব কেসে string বানিয়ে পাঠাচ্ছি
+      // Create purchase
       const rid = (data?._id?.$oid ?? data?._id ?? '').toString();
       await api.post('/purchases', { reviewId: rid });
       toast.success('Purchase completed!');
@@ -53,7 +55,7 @@ export default function ReviewDetails(){
 
         <p>{data.reviewText}</p>
 
-        {/* ✅ Only Buy Now */}
+        {/* Buy Now */}
         <div className="mt-5 flex items-center gap-3">
           <button onClick={handleBuy} className="btn btn-accent">Buy Now</button>
           <Link to="/reviews" className="btn btn-ghost border">← Back</Link>

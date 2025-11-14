@@ -1,4 +1,3 @@
-// src/utils/avatar.js
 export function avatarFromUser(user) {
   const name = user?.displayName || user?.email?.split('@')[0] || 'User';
   const fallback = `https://ui-avatars.com/api/?name=${encodeURIComponent(
